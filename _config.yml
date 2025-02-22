@@ -6,8 +6,7 @@ title: blank # the website title (if blank, full name will be used instead)
 first_name: Matthew
 middle_name: A.
 last_name: Hernandez
-contact_note: # >
-  #You can even add a little note about which of these is the best way to reach you.
+contact_note: # > You can even add a little note about which of these is the best way to reach you.
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
@@ -29,8 +28,8 @@ back_to_top: true # set to false to disable the back to top button
 # -----------------------------------------------------------------------------
 
 # repo color theme
-repo_theme_light: nord      # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
-repo_theme_dark: calm       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_light: nord # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_theme_dark: calm # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 
 repo_trophies:
   enabled: false

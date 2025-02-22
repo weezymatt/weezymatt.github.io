@@ -17,13 +17,13 @@
   type: time_table
   contents:
     - title: Machine Translation Intern | XRI Global, Remote
-      institution: 
+      institution:
       year: 2024 - Current
       description:
-          - Developed a semi-automated ETL system that reports on the current landscape of datasets for machine translation
-          - Created a quality management process that ensures extracted data is unique, consistent, and complete; and contribute to community resources (i.e., Hugging Face)
-          - Identified candidate languages for neural machine translation by researching state-of-the-art modeling for low-resource languages and cross-referenced supported languages with large amounts of training data
-          - Trained neural machine translation systems for low-resource languages unsupported by current engines
+        - Developed a semi-automated ETL system that reports on the current landscape of datasets for machine translation
+        - Created a quality management process that ensures extracted data is unique, consistent, and complete; and contribute to community resources (i.e., Hugging Face)
+        - Identified candidate languages for neural machine translation by researching state-of-the-art modeling for low-resource languages and cross-referenced supported languages with large amounts of training data
+        - Trained neural machine translation systems for low-resource languages unsupported by current engines
     - title: Research Assistant
       institution: University of Arizona
       department: Linguistics & Computer Science
@@ -34,7 +34,7 @@
         - Participated in annotation effort and resolved ambiguities for Cohen’s kappa statistic during weekly discussions.
 
     - title: Community Health Analyst | WellMed Medical Management
-      institution: 
+      institution:
       year: 2022-2024
       description:
         - Identified high-risk patients for health opportunities by compiling data and characterizing patients without a primary care provider for downstream outreach
@@ -71,7 +71,7 @@
       value: Text Retrieval & Web Search
     - name: LING/CSC 538
       value: Computational Linguistics
-    - name: LING/CSC 581 
+    - name: LING/CSC 581
       value: Advanced Computational Linguistics
     - name: LING 503
       value: Syntax
@@ -85,7 +85,7 @@
   contents:
     - title: <a href="https://huggingface.co/weezygeezer">MT4All on Hugging Face</a>
       year: 2025-now
-      description: 
+      description:
         - Submit pull requests to update language information (ISO codes) and data attributes for machine translation datasets
         - Preprocess unloaded datasets by correcting file errors or start a community discussion
 
@@ -95,7 +95,6 @@
     - year: 2025
       items:
         - <a href="https://www.unesco.org/en/articles/language-technologies-all-lt4all-2025"> <u>Language Technologies for All (LT4All 2025):<u></a> Advancing Humanism through Language Technologies
-
 # - title: Academic Interests
 #   type: nested_list
 #   contents:

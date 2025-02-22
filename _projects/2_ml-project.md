@@ -2,23 +2,26 @@
 layout: page
 title: Named Entity Recognition with Classical ML
 description: Project for the course INFO 521 "Introduction to Machine Learning"
-img: assets/img/ner-project.png 
+img: assets/img/ner-project.png
 importance: 2
 category: coursework
 giscus_comments: false
 related_publications: true
 ---
+
 ## Highlights
+
 We present a brief survey on classical machine learning algorithms in the context of the CoNNL-2003 Shared Task. A named entity recognition (NER) system is built to recognize and classify objects in a body of text into predefined categories. While the task is certainly not new, we approach the task naively[^1]. by creating a baseline to get some inspiration and determine the complexity of the problem which motivates the use of machine learning. Finally, we include an analysis between generative and discriminative machine learning algorithms.
 
 [^1]: Naive in the sense that we should attempt to solve the task with appropriate tools. We may also note various when we baseline systems correctly.
 
 > **NOTE** Access to GitHub repository [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning) and paper [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning/blob/main/reports/INFO_521_report.pdf)
 
-A secondary objective for the project required each algorithm to be written in pure python with numpy. The ```scikit-learn``` library was used for comparision purposes during evaluation. 
+A secondary objective for the project required each algorithm to be written in pure python with numpy. The `scikit-learn` library was used for comparision purposes during evaluation.
 
 ## Introduction
-The Named Entity Recognition and Classification (NERC) task refers to the process that identifies phrases in text into various categories. Common entity types include ORGANIZATION (ORG), PERSON (PER), LOCATION (LOC), and MISCELLANEOUS (MISC). Tagging is the process of labeling each word in a sentence with its respective named entity (NE). As an example: 
+
+The Named Entity Recognition and Classification (NERC) task refers to the process that identifies phrases in text into various categories. Common entity types include ORGANIZATION (ORG), PERSON (PER), LOCATION (LOC), and MISCELLANEOUS (MISC). Tagging is the process of labeling each word in a sentence with its respective named entity (NE). As an example:
 
 <div class="entities" style="line-height: 2.5; direction: ltr">
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
@@ -74,12 +77,14 @@ ignores nested entities in favor of flat structures that are easier to identity 
 problem with missing information. State-of-the-art (SOTA) methods make use of bidirectional Long Short-Term Memory (LSTM) networks with a Conditional Random Field (CRF) layer  {% cite ju-etal-2018-neural %}.
 
 Our contributions:
+
 <ul>
     <li> We approach the NER task through a rule-based approach and create two baseline systems that motivate the use of machine learning.</li>
     <li> We provide an analysis between generative and discriminative machine learning algorithms.</li> 
 </ul>
 
 ## CoNNL-2002/-03
+
 The project describes a baseline & benchmark methodology for developing a NER system in the context of the CoNNL-2003 Shared Task {%cite tjong-kim-sang-de-meulder-2003-introduction %}. We will focus on the English dataset and compare the Spanish corpus from the CoNNL-2002 Shared {%cite tjong-kim-sang-2002-introduction %}[^2].
 
 [^2]: The transformation-based model is inspired by Brill's Tagger: an inductive method for part-of-speech tagging. We used the model for comparision because it's intended to use linguistic intuition.
@@ -99,20 +104,23 @@ The English dataset was preprocessed into training, development, and test sets. 
 </div>
 
 ## Methods
+
 Named entity recognition is treated as a sequence labeling task, that is, given a sequence of words $$ W = (w_1, ..., w_n) $$, we are interested in maximizing the best sequence of tags:
 
-$$ \hat{t}_{1:n} \approx \arg\max_{\hat{t}_{1:n}} P(tag_{1:n}|word_{1:n}) \tag{1} $$
+$$ \hat{t}_{1:n} \approx \arg\max_{\hat{t}_{1:n}} P(tag_{1:n}|word\_{1:n}) \tag{1} $$
 
 We'll introduce two class sequence labeling algorithms, the generative—Hidden Markov Model (HMM)—and the discriminative—Maximum Entropy Markov Model (MEMM). We encourage the reader who is interested in the mathematical derivation of each algorithm to read our paper. Otherwise the equation above is sufficient for intuition.
 
 Key differences:
+
 <ul>
     <li> Generative: probabilistic modeling may lead to greater interpretability</li>
     <li> Discriminative: easy to implement feature functions </li>
 </ul>
 
 ## Baselines
-Two rule-based systems were computed for the English and Spanish corpora with the seqeval package {%cite seqeval %}. The **AlwaysNonEntity** is a naive baseline that labels all tokens as non-entities (O), see Table 1. The less naive system **SingleEntity** is based on a lookup table where only the beginning (B-) of entities is added, see Table 2. 
+
+Two rule-based systems were computed for the English and Spanish corpora with the seqeval package {%cite seqeval %}. The **AlwaysNonEntity** is a naive baseline that labels all tokens as non-entities (O), see Table 1. The less naive system **SingleEntity** is based on a lookup table where only the beginning (B-) of entities is added, see Table 2.
 
 <div class="row justify-content-center">
     <div class="col-md-9 mt-3 mt-md-0 text-center">
@@ -125,6 +133,7 @@ As evidenced with the **AlwaysNonEntity** baseline, token-level accuracy has a m
 Earlier we noticed the CoNNL-2003 dataset is imbalanced. Largely the distribution of named entities is imbalanced where the majority class is outside (O). Therefore we will use the micro-averaged F1 score for evaluation because this doesn't prefer the majority class. However other evaluation methods may be appropriate depending on the domain. We do not consider these.
 
 ## Experiments
+
 We compare the MEMM and HMM on the NERC task. The Spanish dataset was evaluated exclusively by an HMM, the results in Table 4 suggest a first-order model an appropriate benchmark for the task. We obtained an 𝐹1 score of 67.5% which is an improvement over baselines and the transformation-based model proposed by Villalba and Guzmán {%cite villalba2020namedentityextractionfinite %}.
 
 <div class="row justify-content-center">
@@ -149,6 +158,7 @@ performed and generalized the best with greedy search as the validation score di
 drastically for the test data.
 
 ## Ablation Study
+
 The motivation for maximum-entropy modeling is clear: global and local features are useful for prediction. The inclusion of feature functions and static word embeddings allowed the MEMM to recognize complex entities. This increase in features, and in effect parameters, improved the overall performance of the system. The ablation study below highlights how each category of features improved our system.
 
 <div class="row justify-content-center">
@@ -157,9 +167,9 @@ The motivation for maximum-entropy modeling is clear: global and local features 
     </div>
 </div>
 
-
 ## Conclusion
-We described the performance of our algorithms and their variants in Tables 3 & 4. The ME approach clearly shows discriminative modeling gives good results; it easily outperforms the **AlwaysNonEntity** and **SingleEntity** baselines and beats a first-order HMM as well.6 
+
+We described the performance of our algorithms and their variants in Tables 3 & 4. The ME approach clearly shows discriminative modeling gives good results; it easily outperforms the **AlwaysNonEntity** and **SingleEntity** baselines and beats a first-order HMM as well.6
 
 The discussion of generative and discriminative modeling by Ng and Jordan {%cite NIPS2001_7b7a53e2 %} also suggests logistic regression will eventually catch up and overtake the performance of a generative classifier given enough data. This implication may be extended to deep neural networks that already hold SOTA performance.
 
@@ -171,6 +181,4 @@ The discussion of generative and discriminative modeling by Ng and Jordan {%cite
 
 Therefore we conclude that advancements in NLP (i.e., embeddings) have improved our
 model (see Table 7) with little feature engineering and can reach competitive performance
-with tuning or more careful modeling. We are not interested in performance however, and propose that the CoNNL-2003 dataset may be dated and we should instead access the generalization of these models or evaluate nested entities. 
-
-
+with tuning or more careful modeling. We are not interested in performance however, and propose that the CoNNL-2003 dataset may be dated and we should instead access the generalization of these models or evaluate nested entities.
