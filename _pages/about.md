@@ -9,7 +9,7 @@ profile:
   image: test.jpg # prof_pic.jpg
   image_circular: false # crops the image to make it circular
   more_info: false # include <p>university information</p>
-  
+
 selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 
@@ -23,10 +23,11 @@ latest_posts:
   scrollable: false # adds a vertical scroll bar if there are more than 3 new posts items
   limit: 3 # leave blank to include all the blog posts
 ---
+
 <h5>Welcome to my technical blog. I am computational linguist.</h5>
 <!-- **tl;dr** Welcome to my technical blog. I am computational linguist. -->
 <br>
-I am graduating from [the University of Arizona](https://linguistics.arizona.edu/) with a master's degree in Human Language Technology. Nowadays I'm working on machine translation systems for low-resource languages. 
+I am graduating from [the University of Arizona](https://linguistics.arizona.edu/) with a master's degree in Human Language Technology. Nowadays I'm working on machine translation systems for low-resource languages.
 
 My formal background is the intersection of linguistics and computer science where we use algorithms and computational models to extract meaningful information from natural language, i.e., natural language processing. My research interests lie in machine translation, information retrieval, and language modeling.
 
