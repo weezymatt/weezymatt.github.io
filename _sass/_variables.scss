@@ -23,20 +23,27 @@ $light-purple-color: color.adjust($purple-color, $lightness: 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;
 $yellow-color: #efcc00 !default;
+$grey-color: #828282 !default;
+$white-color: #ffffff !default;
+$black-color: #000000 !default;
+
+// Custom
+$turqoise-color: #06768d !default;
 $tawny-color: #7f461b !default;
 $burgundy-color: #550000 !default;
 $cinnamon-color: #622a0f !default;
 $rust-color: #b7410e !default;
-
-$grey-color: #828282 !default;
+$jade-color: #348C75 !default;
+$jade-dragon: #02675C !default;
+$jade-green: #3AB09E !default;
 $grey-color-light: color.adjust($grey-color, $lightness: 40%);
 $grey-color-dark: #1c1c1d;
 $grey-900: #212529;
 
-$white-color: #ffffff !default;
-$black-color: #000000 !default;
+$rust-dark: lighten($rust-color, 30%);
 
-$grey-color-very-light: lighten($grey-color, 30%);
+// Light
+$grey-color-very-light: lighten($grey-color, 45%);
 $tawny-color-very-light: lighten($tawny-color, 30%);
 $cinnamon-color-very-light: lighten($cinnamon-color, 20%);
 // Theme colors

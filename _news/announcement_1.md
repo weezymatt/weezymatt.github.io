@@ -1,8 +1,7 @@
 ---
 layout: post
-date: 2015-10-22 15:59:00-0400
+date: 2025-02-22 
 inline: true
 related_posts: false
 ---
-
-A simple inline announcement.
+Debuting the project "Bridging the Digital Divide" with XRI Global and UA interns at the [LT4All 2025](https://www.lt4all2025.eu/) conference. :sparkles: :smile:
