@@ -30,13 +30,6 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-resources",
-          title: "resources",
-          description: "This page is a collection of papers and reference materials I found useful.",
-          section: "Navigation",
-          handler: () => {
-            window.location.href = "/resources/";
-          },
         },{id: "post-a-post-with-image-galleries",
       
         title: "a post with image galleries",
