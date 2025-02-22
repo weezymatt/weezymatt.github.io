@@ -1,14 +1,10 @@
-github_users:
-  - torvalds
-  - alshedivat
+github_users: 
 
-repo_description_lines_max: 2
+repo_description_lines_max: 3
 
 github_repos:
-  - alshedivat/al-folio
-  - jekyll/jekyll
-  - twbs/bootstrap
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - mathjax/MathJax
-  - jpswalsh/academicons
+  - weezymatt/NER-with-Classical-ML
+  - weezymatt/Retrieval-with-Wordle
+  - uazhlt-ms-program/ling-539-spring-2024-class-competition-weezymatt
+  - weezymatt/ml-deployment
+  - XRILLC/inclusiveai
