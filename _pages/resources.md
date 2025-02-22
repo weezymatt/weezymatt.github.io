@@ -9,4 +9,4 @@ nav_order: 6
 
 <!-- <iframe src="http://localhost:8080/_pages/amla-links.html" height="600" width="1000" title="description">hellow?</iframe> -->
 
-<iframe src="../assets/html/amla-links.html" height="600" width="1000" title="description"></iframe>
+<iframe src="../assets/html/amla-links.html" height="500" width="1000" title="description"></iframe>
