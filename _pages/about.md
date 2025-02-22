@@ -36,9 +36,9 @@ I am graduating from [the University of Arizona](https://linguistics.arizona.edu
 
 <!-- There exists a qoute that describes me to the tee: ```Jack of all trades...``` --*wait for it*-- ```...master of none.``` I kid, the last part isn't entirely true. I subscribe to the philosophy that learning is a lifelong journey with no destination. This has led me to appreciate the art of commiting things to memory but also understanding things on an intuitive, or deep level. Challenging is basically a synonym for fun. -->
 
-Research wise, a great deal of my masters was spent collaborating with the computer science department on applications of large language models. My background in linguistics offered valuable insight on empirical phenomenon. There is deal of value in explaining things to your audience simply, _sans_[^2] the technical jargon.
+Research wise, a great deal of my masters was spent collaborating with the computer science department on applications of large language models. My background in linguistics offered valuable insight on empirical phenomenon. There is deal of value in explaining things to your audience _sans_[^2] the technical jargon.
 
-Academically, my coursework involved various approaches (i.e., statistical, applied, algorithmic) to natural language processing, information retrieval, and machine learning. One of the most useful skills I learned was practical implementations of research papers and using them as a guide to novel problems. I also appreciate the art is baseline systems; not all solutions require a neural network, erhm... a hammer. One of the most worthwhile courses I've taken was an introduction of machine learning where we lived in math world.
+Academically, my coursework involved various approaches (i.e., statistical, applied, algorithmic) to natural language processing, information retrieval, and machine learning. One of the most useful skills I learned was practical implementations of research papers and using them as a guide to novel problems. I also appreciate the art of baseline systems; not all problems require a hammer, erhm... a neural network. One of the most worthwhile courses I've taken was an introduction of machine learning where we lived in math world.
 
 <!-- I also think information retrieval is the coolest thing—it's all about the user.  -->
 
