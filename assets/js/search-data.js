@@ -30,12 +30,12 @@ ninja.data = [{
           handler: () => {
             window.location.href = "/cv/";
           },
-        },{id: "nav-resources",
-          title: "resources",
-          description: "This page is a collection of papers and reference materials I found useful.",
+        },{id: "nav-about",
+          title: "about",
+          description: "",
           section: "Navigation",
           handler: () => {
-            window.location.href = "/resources/";
+            window.location.href = "/about/";
           },
         },{id: "post-a-post-with-image-galleries",
       
@@ -392,9 +392,9 @@ ninja.data = [{
     },{id: "news-debuting-the-project-bridging-the-digital-divide-with-xri-global-and-ua-interns-at-the-lt4all-2025-conference-sparkles-smile",
           title: 'Debuting the project “Bridging the Digital Divide” with XRI Global and UA interns...',
           description: "",
-          section: "News",},{id: "projects-project-1",
-          title: 'project 1',
-          description: "with background image",
+          section: "News",},{id: "projects-bridging-the-digital-divide-where-do-we-stand",
+          title: 'Bridging the digital divide: Where do we stand?',
+          description: "Details for internship with XRI Global TODO",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-named-entity-recognition-with-classical-ml",
