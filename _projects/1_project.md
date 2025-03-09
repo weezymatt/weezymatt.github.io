@@ -1,12 +1,32 @@
 ---
 layout: page
-title: project 1
-description: with background image
+title: "Bridging the digital divide: Where do we stand?"
+description: Details for internship with XRI Global TODO
 img: assets/img/12.jpg
 importance: 1
-category: work
+category: internship
 related_publications: true
 ---
+
+## Abstract
+
+As we enter the decade of indigenous languages, it is important to track how much progress is being made in bridging the digital divide. To this end XRI Global and students from the University of Arizona have joined efforts to take inventory of the current data and models that exist for the world's low-resource languages. By cataloging all the data and models on huggingface, GitHub, Common Voice, and other well-known hubs for training data and AI models, our team has produced a map which shows the current level of support for a large number of low-resource languages
+
+> :computer: GitHub repository is available [here](https://github.com/XRILLC/inclusiveai) under the `text` folder <br>
+> :page_facing_up: Poster abstract is available [here](https://www.lt4all2025.eu/2025/02/24/lt4all-2025-book-of-abstracts-now-available/) under the title `Bridging the digital divide: Where do we stand?`
+
+<!-- ##
+
+
+In light of recent advancements, the development of language technologies, in particular for those classified as low-resource,  is the first step to bridge the digital divide. To this end XRI Global and students from the University of Arizona have joined efforts to unveil the current landscape of information that exists for low-resource languages. By cataloging all the data and models from well-known hubs (e.g., Hugging Face, GitHub, Common Voice) for training data and AI models, our team has produced a map which shows the current level of support for a large number of low-resource languages.
+ -->
+
+## Introduction
+
+<br>
+&nbsp; &nbsp; **Mission statement:** All training data and language technology for low-resource languages for a world without language barriers.
+
+The data collection process, filtering, and other stuff were chosed based on the methodologies described in detail in NLLB.
 
 Every project has a beautiful feature showcase page.
 It's easy to include images in a flexible 3-column grid format.

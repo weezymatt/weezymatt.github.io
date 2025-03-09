@@ -3,27 +3,27 @@
   contents:
     - name: Full Name
       value: Matthew A. Hernandez
-    - name: Label
-      value: Computational Linguist
     - name: Languages
       value: English, Spanish, French
+    - name: Email
+      value: "<a href='mailto:wzmatt.work@gmail.com'>wzmatt.work@gmail.com</a>"
 
 - title: Research Interests
   type: list
   contents:
-    - Natural Language Processing, Linguistics, Machine Learning, Deep Learning, Language Modeling
+    - Natural Language Processing, Linguistics, Machine Learning, Deep Learning, Language Modeling, Machine Translation
 
 - title: Experience
   type: time_table
   contents:
-    - title: Machine Translation Intern | XRI Global, Remote
+    - title: AI/ML Intern | XRI Global, Remote
       institution:
       year: 2024 - Current
       description:
         - Developed a semi-automated ETL system that reports on the current landscape of datasets for machine translation
         - Created a quality management process that ensures extracted data is unique, consistent, and complete; and contribute to community resources (i.e., Hugging Face)
         - Identified candidate languages for neural machine translation by researching state-of-the-art modeling for low-resource languages and cross-referenced supported languages with large amounts of training data
-        - Trained neural machine translation systems for low-resource languages unsupported by current engines
+        - Fine-tuned lightweight NMT systems for low-resource languages unsupported by current engines using efficient and cost-effective techniques (e.g., LoRA)
     - title: Research Assistant
       institution: University of Arizona
       department: Linguistics & Computer Science
@@ -58,23 +58,25 @@
   type: map
   contents:
     - name: CSC 585
-      value: Algorithms for NLP
-    - name: LING/CSC/INFO 539
+      value: Algorithms for Natural Language Processing
+    - name: LING 539
       value: Statistical Natural Language Processing
+    - name: INFO 555
+      value: Applied Natural Language Processing
     - name: INFO 521
       value: Introduction to Machine Learning
     - name: INFO 621
-      value: Advanced ML Applications
+      value: Advanced Machine Learning Applications
     - name: INFO 557
       value: Neural Networks
     - name: CSC 583
       value: Text Retrieval & Web Search
-    - name: LING/CSC 538
+    - name: LING 538
       value: Computational Linguistics
-    - name: LING/CSC 581
+    - name: LING 581
       value: Advanced Computational Linguistics
     - name: LING 503
-      value: Syntax
+      value: Foundations of Syntactic Theory
     - name: LING 501
       value: Formal Foundations of Linguistics
     - name: LING 579
@@ -89,23 +91,13 @@
         - Submit pull requests to update language information (ISO codes) and data attributes for machine translation datasets
         - Preprocess unloaded datasets by correcting file errors or start a community discussion
 
-- title: Invited Talks # poster presentation conferences?
+- title: Abstracts
   type: time_table
   contents:
-    - year: 2025
+    - title: <a href="https://www.lt4all2025.eu/wp-content/uploads/2025/02/LT4All-2025_Book-of-Abstracts_Final.pdf"> Bridging the digital divide Where do we stand?</a>
+      year: 2025
       items:
-        - <a href="https://www.unesco.org/en/articles/language-technologies-all-lt4all-2025"> <u>Language Technologies for All (LT4All 2025):<u></a> Advancing Humanism through Language Technologies
-# - title: Academic Interests
-#   type: nested_list
-#   contents:
-#     - title: Computational Modeling.
-#       items:
-#         - Understanding what computational models can tell us about human language
-#     - title: Socio-linguistics.
-#       items:
-#         - How people use language to convey themselves in society
-
-# - title: Other Interests
+        - <a href="https://www.lt4all2025.eu/"> <u>Language Technologies for All (LT4All 2025):<u></a> Advancing Humanism through Language Technologies
 #   type: list
 #   contents:
 #     - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
