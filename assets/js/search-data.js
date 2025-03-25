@@ -394,7 +394,7 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-bridging-the-digital-divide-where-do-we-stand",
           title: 'Bridging the digital divide: Where do we stand?',
-          description: "Details for internship with XRI Global TODO",
+          description: "XRI Global Internship",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-named-entity-recognition-with-classical-ml",
