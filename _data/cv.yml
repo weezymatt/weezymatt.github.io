@@ -4,34 +4,39 @@
     - name: Full Name
       value: Matthew A. Hernandez
     - name: Languages
-      value: English, Spanish, French
+      value: Spanish, French
     - name: Email
       value: "<a href='mailto:wzmatt.work@gmail.com'>wzmatt.work@gmail.com</a>"
 
 - title: Research Interests
   type: list
   contents:
-    - Natural Language Processing, Linguistics, Machine Learning, Deep Learning, Language Modeling, Machine Translation
+    - Natural Language Processing, Linguistics, Machine Learning, Deep Learning, Machine Translation, Bilingualism, Psycholinguistics
 
 - title: Experience
   type: time_table
   contents:
-    - title: AI/ML Intern | XRI Global, Remote
+    - title: NLP/ML Intern | XRI Global, Remote
       institution:
       year: 2024 - Current
       description:
-        - Developed a semi-automated ETL system that reports on the current landscape of datasets for machine translation
-        - Created a quality management process that ensures extracted data is unique, consistent, and complete; and contribute to community resources (i.e., Hugging Face)
-        - Identified candidate languages for neural machine translation by researching state-of-the-art modeling for low-resource languages and cross-referenced supported languages with large amounts of training data
-        - Fine-tuned lightweight NMT systems for low-resource languages unsupported by current engines using efficient and cost-effective techniques (e.g., LoRA)
+        - Developed a semi-automated extraction system that identified candidate languages for neural machine translation
+          unsupported by major engines
+        - Created a quality management process to ensure metadata for parallel corpora is unique, consistent, and complete
+        - Conducted a literature review on effective strategies to improve performance for machine translation in low-resource
+          settings (e.g., back-translation, multilingual transfer, filtering)
+        - Implemented a neural translation system with competitive performance under limited resources by first establishing a
+          baseline model to guide improvements
     - title: Research Assistant
       institution: University of Arizona
       department: Linguistics & Computer Science
       year: 2023 - 2024
       description:
-        - Served as research assistant working on the development of novel datasets for the consequences of subjective views and natural language understanding of rhetorical questions.
-        - Prepared revisions to annotation guidelines in order to broadly define the task for large language models (LLMs)
-        - Participated in annotation effort and resolved ambiguities for Cohen’s kappa statistic during weekly discussions.
+        - Supported the development of novel datasets for various phenomenon (i.e., consequences of subjective views and understanding of rhetorical questions) for LLMs
+        - Designed supplementary guidelines for annotation cycle resulting in substantial agreement between annotators and
+          solved disagreements with the adjudicator
+        - Assessed the quality of novel datasets by utilizing statistical methods (e.g., Cohen’s kappa) to evaluate inter-rater
+          reliability between annotators
 
     - title: Community Health Analyst | WellMed Medical Management
       institution:
@@ -40,7 +45,15 @@
         - Identified high-risk patients for health opportunities by compiling data and characterizing patients without a primary care provider for downstream outreach
         - Standardized community health pipeline to target patients post-hospitalization and support patients by providing access to social and medical resources.
         - Improved data quality for patient variables (e.g., existing primary physician) by submitting approvals on behalf of patients with undetermined information
-        - Impacted the well-being of patients positively by simple explanations of coverage and healthcare outcomes
+        # - Impacted the well-being of patients positively by simple explanations of coverage and healthcare outcomes
+
+    - title: Research Assistant
+      institution: University of El Paso
+      department: Linguistics
+      year: 2021-2021
+      description:
+        - Supervised various picture description tasks for grammatical analysis in English-Spanish to measure the choice of noun phrases (R-expressions)
+        - Configured Ibex software to host new psycholinguistic experiments for students and record their response time
 
 - title: Education
   type: time_table
@@ -79,7 +92,7 @@
       value: Foundations of Syntactic Theory
     - name: LING 501
       value: Formal Foundations of Linguistics
-    - name: LING 579
+    - name: LING 578
       value: Speech Technology
 
 - title: Open Source Projects
@@ -89,7 +102,7 @@
       year: 2025-now
       description:
         - Submit pull requests to update language information (ISO codes) and data attributes for machine translation datasets
-        - Preprocess unloaded datasets by correcting file errors or start a community discussion
+        - Correct file errors in uploaded datasets by preprocessing .csv files or starting community discussions
 
 - title: Abstracts
   type: time_table
