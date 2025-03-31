@@ -1,6 +1,6 @@
 ---
 layout: about
-title: welcome
+title:
 permalink: /
 subtitle: # Computational Linguistics | Natural Language Processing # <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
 
