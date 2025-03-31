@@ -39,15 +39,8 @@ Below are some of the natural language processing tasks, machine learning algori
 
 During the program, I spent a great deal of studying mathematics for machine learning, learning best practices for software development, and the baseline methodology for extracting natural language to do intelligent tasks. I also learned the value of being an interdisciplinary individual and the importance of collaboration during my time with the computer science department. That is not to disregard my previous background in linguistics; I fancied topics such as sociolinguistics, bilingualism, syntax, and learned French. Fine, how to _read_ in French.
 
-## resources
-
-This is a collection of useful readings[^4].
-
-<iframe src="../assets/html/amla-links.html" height="600" width="750" title="description"></iframe>
-
 ## footnotes
 
 [^1]: Hello math. My introduction to machine learning course was where I rediscovered my enjoyment for mathematics and deglamorized the idea of machine learning—it's all math!
 [^2]: My algorithms for natural language processing course emphasized the importance of reading the literature. I learned the value of research and found enjoyment in implementing the technical aspects of these papers.
 [^3]: I had an excellent professor that taught the value of explaining complex topics simply and started each lecture with a motivation slide.
-[^4]: These resources are mainly for reference purposes and I figured this is as good of a spot as any to place them!
