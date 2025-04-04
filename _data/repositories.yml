@@ -5,6 +5,6 @@ repo_description_lines_max: 3
 github_repos:
   - weezymatt/NER-with-Classical-ML
   - weezymatt/Retrieval-with-Wordle
-  - uazhlt-ms-program/ling-539-spring-2024-class-competition-weezymatt
   - weezymatt/ml-deployment
+  - weezymatt/tree-of-thoughts_demo
   - XRILLC/inclusiveai

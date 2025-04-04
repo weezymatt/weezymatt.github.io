@@ -25,6 +25,8 @@ The work was also presented during a poster session at the International Confere
 > :page_facing_up: Poster abstract is available [here](https://www.lt4all2025.eu/2025/02/24/lt4all-2025-book-of-abstracts-now-available/) under `Bridging the digital divide: Where do we stand?` <br>
 > :computer: XRI Global and students at UA produced a map that is live [here](https://inclusiveai-app.vercel.app/)
 
+**NOTE: The code written during the internship is well-documented on GitHub and lengthy so I chose to simply link to the repository.**
+
 ## 2. Digital Divide Objective
 
 ### 2.1 Methodology
@@ -44,7 +46,7 @@ Popular resources include:
 3.  [StatMT](https://statmt.org/)
 4.  [Wikipedia](https://www.wikipedia.org/) (excellent for monolingual data)
 
-Hugging Face is a collaborative platform used for building, training, and deploy various artificial intelligence (AI) models, and many researchers and local efforts publish their datasets there. Therefore we choose to use Hugging Face as the main source of parallel data and manually add external datasets periodically.
+Hugging Face is a collaborative platform used for building, training, and deploy various artificial intelligence (AI) models, and many researchers and local efforts publish their datasets there. For that reason we choose to use Hugging Face as the main source of parallel data and manually add external datasets periodically.
 
 There are two data collections we are interested in: bitexts and their available language pairs.
 
@@ -145,81 +147,40 @@ While the performance for the opus-mt-...-mul model was superior, the italic (it
 
 ### 3.4 Data
 
+The [Spanish-Asturian Parallel Corpus](https://huggingface.co/datasets/weezygeezer/Spanish-Asturian_Parallel-Corpus) is a dataset created to support the development of Machine Translation (MT) systems for translating from Spanish (es) into Asturian (ast). The dataset is created to support the development of Machine Translation (MT) systems for translating from Spanish (es) into Asturian (ast).
+
+The text was extracted from [Opus](https://opus.nlpl.eu/results/es&ast/corpus-result-table) under the following resources: OpenSubtitles, Tatoeba, KDE4, wikimedia, GNOME {%cite TIEDEMANN12.463 lison-tiedemann-2016-opensubtitles2016 %}. These datasets were chosen specifically because the source and target pairs are correct [^3]. Additionally, the data from [PILAR](https://github.com/transducens/PILAR) was used to create synthetic corpora {%cite PILAR %}. This dataset separates both synthetic and existing data for convenience and ablation studies. The synthetic data consist of Spanish translations generated from the Asturian monolingual corpus of the PILAR dataset. To create the synthetic Spanish translations we used the [OPUS-MT](Helsinki-NLP/opus-mt-tc-bible-big-itc-fra_ita_por_spa) model with greedy decoding.
+
+The data filtering process incorporated language identification using the [Idiomata Cognitor](https://github.com/transducens/idiomata_cognitor) tool {%cite idiomatacognitor %}. No other preprocessing steps (e.g. alignment, word dropout, swapping) were used, meaning any peculiarities exist solely from the data itself. However, this is not the case for the synthetic data—peculiarities certainly exist. Notably the synthetic data was filtered twice by the language identifier.
+
+|            | Tatoeba | OpenSubtitles |  KDE4  | wikimedia | GNOME  |
+| :--------: | :-----: | :-----------: | :----: | :-------: | :----: |
+|  **ast**   |   159   |    17,486     | 26,023 |  45,506   | 68,668 |
+| **langid** |   94    |     8,091     | 12,025 |  39,958   | 37,551 |
+
+_Table 1: Parallel Data._
+
+|                  | PILAR - literary | PILAR - crawled |
+| :--------------: | :--------------: | :-------------: |
+|     **ast**      |      14,776      |     24,094      |
+| **langid (ast)** |      10,538      |     17,121      |
+| **langid (es)**  |      9,329       |     15,409      |
+
+_Table 2: Monolingual Data._
+
 ### 3.5 Models
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+The _opus-mt-tc-bible-big-deu_eng_fra_por_spa-itc_ model was fine-tuned on the parallel corpus we extracted above for 3 epochs. The performance was impressive, especially for a test run. We achieved approximately 20 bleu points above our baseline and Apertium's system.
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+| Model                                        | BLEU | chrF2 | Epochs |
+| :------------------------------------------- | :--: | ----: | :----: |
+| opus-mt-tc-bible-big-deu_eng_fra_por_spa-itc | 28.6 | 50.61 |   3    |
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
-
-You can also put regular text between your rows of images, even citations {% cite einstein1950meaning %}.
-Say you wanted to write a bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, _bled_ for your project, and then... you reveal its glory in the next row of images.
-
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-
-```html
-<div class="row justify-content-sm-center">
-  <div class="col-sm-8 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-  <div class="col-sm-4 mt-3 mt-md-0">
-    {% include figure.liquid path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-  </div>
-</div>
-```
-
-{% endraw %}
+<br>
+Previous runs used a similar parallel corpus much larger than ours (~ 1 million examples) and recieved irratic performance. During these runs the bleu score would jump around the bleu scores [3, 8, 16, 24] respectively. Our work to create a quality dataset by using a simple language identifier was extremely helpful. However, further work can be done to preprocess this dataset more carefull, test if pre-training on a similar language (perhaps Galician, there's a large corpus available) can achieve better results.
 
 ## Footnotes
 
 [^1]: While most examples of parallel data are sentences, occasionally datasets contain words or various formats that need further preprocessing. Hence why we emphasize rows instead of sentences.
-[^2]: While extraction is relatively easy, this is unfortunate behavior by the major engine. Google provides clear documentation for discovering supported languages by their engine but the list is incomplete. Users interesting in MT have resorted to the endpoint for further extraction.
+[^2]: Despite extraction being relatively easy, this is unfortunate behavior by the major engine. Google provides clear documentation for discovering supported languages by their engine but the list is incomplete. Users interesting in MT have resorted to the endpoint for further extraction.
+[^3]: For Asturian, the large machine translation bitexts contain segments that are not in the correct language, and source and target pairs are also not translation equivalents.
