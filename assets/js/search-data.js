@@ -401,12 +401,12 @@ ninja.data = [{
           description: "",
           section: "News",},{id: "projects-bridging-the-digital-divide-where-do-we-stand",
           title: 'Bridging the digital divide: Where do we stand?',
-          description: "XRI Global Internship",
+          description: "Internship — XRI Global",
           section: "Projects",handler: () => {
               window.location.href = "/projects/1_project/";
             },},{id: "projects-named-entity-recognition-with-classical-ml",
           title: 'Named Entity Recognition with Classical ML',
-          description: "Project for the course INFO 521 &quot;Introduction to Machine Learning&quot;",
+          description: "Course Project — INFO 521 &quot;Introduction to Machine Learning&quot;",
           section: "Projects",handler: () => {
               window.location.href = "/projects/2_ml-project/";
             },},{id: "projects-project-2",
