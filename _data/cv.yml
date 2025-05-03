@@ -17,7 +17,7 @@
   type: time_table
   contents:
     - title: NLP/ML Intern | XRI Global, Remote
-      institution:
+      department: "<a href='https://inclusiveai-app.vercel.app/'>https://inclusiveai-app.vercel.app/</a>"
       year: 2024 - Current
       description:
         - Developed a semi-automated extraction system that identified candidate languages for neural machine translation
@@ -32,7 +32,7 @@
       department: Linguistics & Computer Science
       year: 2023 - 2024
       description:
-        - Supported the development of novel datasets for various phenomenon (i.e., consequences of subjective views and understanding of rhetorical questions) for LLMs
+        - Supported the development of novel datasets for various phenomena (i.e., consequences of subjective views and understanding of rhetorical questions) for LLMs
         - Designed supplementary guidelines for annotation cycle resulting in substantial agreement between annotators and
           solved disagreements with the adjudicator
         - Assessed the quality of novel datasets by utilizing statistical methods (e.g., Cohen’s kappa) to evaluate inter-rater

@@ -14,7 +14,7 @@ Below are some of the natural language processing tasks, machine learning algori
 
   - linguistic tasks: part-of-speech tagging, dependency parsing, named entity recognition, language detection, language modeling
   - rule-based, statistical, and neural approaches
-  - instrinsic & extrinsic evaluation
+  - intrinsic & extrinsic evaluation
   - machine translation
   - information retrieval & web search
   - dataset creation (e.g., experience using kappa's agreement)

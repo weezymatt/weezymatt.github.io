@@ -11,17 +11,21 @@ related_publications: true
 
 ## Highlights
 
-We present a brief survey on classical machine learning algorithms in the context of the CoNNL-2003 Shared Task. A named entity recognition (NER) system is built to recognize and classify objects in a body of text into predefined categories. While the task is certainly not new, we approach the task naively[^1]. by creating a baseline to get some inspiration and determine the complexity of the problem which motivates the use of machine learning. Finally, we include an analysis between generative and discriminative machine learning algorithms.
+This blog post present a brief survey on classical machine learning algorithms in the context of the CoNNL-2003 Shared Task. A named entity recognition (NER) system is built to recognize and classify objects in a body of text into predefined categories. While the task is certainly not new, I approach the task naively[^1] by creating a baseline to get some inspiration and determine the complexity of the problem which motivates the use of machine learning. Finally, an analysis is included between generative and discriminative machine learning algorithms.
 
-[^1]: Naive in the sense that we should attempt to solve the task with appropriate tools. We may also note various when we baseline systems correctly.
+[^1]: Naive in the sense that one should attempt to solve the task with appropriate tools. This also exposes details in the data when one uses relevant baselines.
 
-> **NOTE** Access to GitHub repository [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning) and paper [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning/blob/main/reports/INFO_521_report.pdf)
+> **NOTE** Access to GitHub repository [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning) and paper [here](https://github.com/weezymatt/NER-with-Classical-Machine-Learning/blob/main/reports/INFO_521_report.pdf).
 
-A secondary objective for the project required each algorithm to be written in pure python with numpy. The `scikit-learn` library was used for comparision purposes during evaluation.
+A secondary objective for the project required each algorithm to be written in python. While not required, the `scikit-learn` library was used as comparision for a sanity-check during evaluation.[^2]
+
+- Since the writing of this blog/paper, I've implemented various architectures from papers (e.g., deep averaging networks, lstms with attention) and can confidently cite the difference in runtime between the written algorithm and the imported algorithm due to inefficent matrix multiplication. That is, my inexperience was at fault. While the performance was nearly identical (suggesting a correctly implemented algorithm) that did not take advantage of the hardware, resulting is slower performance. I highly suggest newcomers to try implementing an architecture from scratch as it really teaches you the dirty details in machine learning.
+
+[^2]: Debugging machine learning is a difficult but useful skill. Writing algorithms from scratch (in some capacity) is an excellent exercise.
 
 ## Introduction
 
-The Named Entity Recognition and Classification (NERC) task refers to the process that identifies phrases in text into various categories. Common entity types include ORGANIZATION (ORG), PERSON (PER), LOCATION (LOC), and MISCELLANEOUS (MISC). Tagging is the process of labeling each word in a sentence with its respective named entity (NE). As an example:
+The Named Entity Recognition and Classification (NERC) task refers to the process that classifies phrases in text as various categories. Common entity types include ORGANIZATION (ORG), PERSON (PER), LOCATION (LOC), and MISCELLANEOUS (MISC). Tagging is the process of labeling each word in a sentence with its respective named entity (NE). As an example:
 
 <div class="entities" style="line-height: 2.5; direction: ltr">
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
@@ -39,9 +43,7 @@ The Named Entity Recognition and Classification (NERC) task refers to the proces
     <span style="font-size: 0.8em; font-weight: bold; line-height: 1; border-radius: 0.35em; vertical-align: middle; margin-left: 0.5rem">GPE</span>
 </mark>
 .</div> <br>
-Note the categorization is subjective as one can argue Arizona is also a LOCATION. Approaches
-to NERC generally use BIO notation which separates the beginning (B-) and inside (I-) of
-entities. Otherwise the label outside (O) is used. The named entity above is now:
+The remaining tokens are classified as the label outside (O), meaning the token is simply outside the named entity phrase. Note the categorization is subjective as one can argue Arizona is also a LOCATION. Approaches to NERC generally use BIO notation which separates the beginning (B-) and inside (I-) of entities. The example above is now:
 
 <div class="entities" style="line-height: 2.5; direction: ltr">
 <mark class="entity" style="background: #7aecec; padding: 0.45em 0.6em; margin: 0 0.25em; line-height: 1; border-radius: 0.35em;">
@@ -74,20 +76,20 @@ entities. Otherwise the label outside (O) is used. The named entity above is now
 NER remains a relevant natural language processing task that benefits several extrinsic tasks
 such as question answering and information extraction. The traditional schema largely
 ignores nested entities in favor of flat structures that are easier to identity but frames the
-problem with missing information. State-of-the-art (SOTA) methods make use of bidirectional Long Short-Term Memory (LSTM) networks with a Conditional Random Field (CRF) layer  {% cite ju-etal-2018-neural %}.
+problem with missing information. State-of-the-art (SOTA) methods make use of bidirectional Long Short-Term Memory (LSTM) networks with a Conditional Random Field (CRF) layer alongside contextualized embeddings {% cite ju-etal-2018-neural %}.
 
-Our contributions:
+Contributions:
 
 <ul>
-    <li> We approach the NER task through a rule-based approach and create two baseline systems that motivate the use of machine learning.</li>
-    <li> We provide an analysis between generative and discriminative machine learning algorithms.</li> 
+    <li> The NER task is approached with a simple rule-based baseline that is further developed into a more complex model, i.e., a hidden markov model. The purpose of this methodology was to motivate the use of machine learning for this particular task, and to motivate the use of Logistic Regression applied to a sequence-labeling problem.</li>
+    <li> An analysis is provided between generative and discriminative machine learning algorithms.</li> 
 </ul>
 
 ## CoNNL-2002/-03
 
-The project describes a baseline & benchmark methodology for developing a NER system in the context of the CoNNL-2003 Shared Task {%cite tjong-kim-sang-de-meulder-2003-introduction %}. We will focus on the English dataset and compare the Spanish corpus from the CoNNL-2002 Shared {%cite tjong-kim-sang-2002-introduction %}[^2].
+The project describes a baseline & benchmark methodology for developing a NER system in the context of the CoNNL-2003 Shared Task {%cite tjong-kim-sang-de-meulder-2003-introduction %}. We will focus on the English dataset and compare[^3] the Spanish corpus from the CoNNL-2002 Shared {%cite tjong-kim-sang-2002-introduction %}.
 
-[^2]: The transformation-based model is inspired by Brill's Tagger: an inductive method for part-of-speech tagging. We used the model for comparision because it's intended to use linguistic intuition.
+[^3]: The transformation-based model is inspired by Brill's Tagger: an inductive method for part-of-speech tagging. We used the model for comparision because it's intended to use linguistic intuition.
 
 The English dataset was preprocessed into training, development, and test sets. Additionally, the number of tokens per entity type highlight the imbalanced nature of the CoNNL-2003 dataset and of NER in general.
 
@@ -130,11 +132,11 @@ Two rule-based systems were computed for the English and Spanish corpora with th
 
 As evidenced with the **AlwaysNonEntity** baseline, token-level accuracy has a modest 80% but is meaninguless for NEs. The improved baseline **SingleEntity** labels entities only if they appear in the training data and is the default baseline for our system to improve upon.
 
-Earlier we noticed the CoNNL-2003 dataset is imbalanced. Largely the distribution of named entities is imbalanced where the majority class is outside (O). Therefore we will use the micro-averaged F1 score for evaluation because this doesn't prefer the majority class. However other evaluation methods may be appropriate depending on the domain. We do not consider these.
+Earlier I stated the CoNNL-2003 dataset is imbalanced. Largely the distribution of named entities is imbalanced where the majority class is outside (O). Therefore the micro-averaged F1 score will be used for evaluation because this doesn't prefer the majority class. However other evaluation methods may be appropriate depending on the domain, but are not considered to focus on the general design process for machine learning.
 
 ## Experiments
 
-We compare the MEMM and HMM on the NERC task. The Spanish dataset was evaluated exclusively by an HMM, the results in Table 4 suggest a first-order model an appropriate benchmark for the task. We obtained an 𝐹1 score of 67.5% which is an improvement over baselines and the transformation-based model proposed by Villalba and Guzmán {%cite villalba2020namedentityextractionfinite %}.
+We compare the MEMM and HMM on the NERC task. The Spanish dataset was evaluated exclusively by an HMM, and the results in Table 4 suggest a first-order model an appropriate benchmark for the task. We obtained an 𝐹1 score of 67.5% which is an improvement over baselines and the transformation-based model proposed by Villalba and Guzmán {%cite villalba2020namedentityextractionfinite %}.
 
 <div class="row justify-content-center">
     <div class="col-md-8 mt-3 mt-md-0 text-center">
@@ -142,7 +144,7 @@ We compare the MEMM and HMM on the NERC task. The Spanish dataset was evaluated 
     </div>
 </div>
 
-For the English dataset we tested several variants by using various add-𝛼 smoothing (𝛼 = 1 or
+For the English dataset, several variants were tested by using various add-𝛼 smoothing (𝛼 = 1 or
 \> 1) values and used pairwise grid search to find optimal values for regularization, epochs, and learning rate. We compared the results of the MEMM imported from scikit-learn and
 our implementation in Table 4.
 
@@ -169,7 +171,7 @@ The motivation for maximum-entropy modeling is clear: global and local features 
 
 ## Conclusion
 
-We described the performance of our algorithms and their variants in Tables 3 & 4. The ME approach clearly shows discriminative modeling gives good results; it easily outperforms the **AlwaysNonEntity** and **SingleEntity** baselines and beats a first-order HMM as well.6
+We described the performance of our algorithms and their variants in Tables 3 & 4. The ME approach clearly shows discriminative modeling gives good results; the approach easily outperforms the stated baselines, **AlwaysNonEntity** and **SingleEntity**. It also achieves a ~10 point performance increase when compared to the first-order HMM on the dev set. Importantly, the generalization error is reduced with the ME approach, which is highly desirable.
 
 The discussion of generative and discriminative modeling by Ng and Jordan {%cite NIPS2001_7b7a53e2 %} also suggests logistic regression will eventually catch up and overtake the performance of a generative classifier given enough data. This implication may be extended to deep neural networks that already hold SOTA performance.
 
@@ -179,6 +181,6 @@ The discussion of generative and discriminative modeling by Ng and Jordan {%cite
     </div>
 </div>
 
-Therefore we conclude that advancements in NLP (i.e., embeddings) have improved our
+Therefore recent advancements (approx. 10 years ago) in NLP (i.e., embeddings) have improved our
 model (see Table 7) with little feature engineering and can reach competitive performance
-with tuning or more careful modeling. We are not interested in performance however, and propose that the CoNNL-2003 dataset may be dated and we should instead access the generalization of these models or evaluate nested entities.
+with tuning or more careful modeling. Ultimately, the performance is a secondary interest,and propose that the CoNNL-2003 dataset may be dated and we should instead access the generalization of these models by iteratively included recent entities or perhaps tackle nested entities.
