@@ -29,7 +29,7 @@ The work was also presented during a poster session at the International Confere
 > :page_facing_up: Poster abstract is available [here](https://www.lt4all2025.eu/2025/02/24/lt4all-2025-book-of-abstracts-now-available/) under `Bridging the digital divide: Where do we stand?` <br>
 > :computer: XRI Global and students at UA produced a map that is live [here](https://inclusiveai-app.vercel.app/)
 
-**NOTE: The code written during the internship is well-documented on GitHub and lengthy so I chose to simply link to the repository under the relevant header. Nearly all code was written by me except for the boilerplate code used from the [Translation](https://huggingface.co/docs/transformers/en/tasks/translation) documentation, which went heavy modification.**
+**NOTE: The code written during the internship is well-documented on GitHub and lengthy so I chose to simply link to the repository under the relevant header. Nearly all code was written by me except for the boilerplate code used from the [Translation](https://huggingface.co/docs/transformers/en/tasks/translation) documentation, which went through heavy modification.**
 
 ## 2. Digital Divide Objective
 
@@ -163,9 +163,7 @@ Apertium is a rule-based MT system that offers support for various languages fro
 
 ℹ️ [GitHub - preprocessing.py](https://github.com/XRILLC/inclusiveai/blob/main/text/experiments/preprocessing.py)
 
-The [Spanish-Asturian Parallel Corpus](https://huggingface.co/datasets/weezygeezer/Spanish-Asturian_Parallel-Corpus) is a dataset created to support the development of Machine Translation (MT) systems for translating from Spanish (es) into Asturian (ast). The dataset is created to support the development of Machine Translation (MT) systems for translating from Spanish (es) into Asturian (ast).
-
-The text was extracted from [Opus](https://opus.nlpl.eu/results/es&ast/corpus-result-table) under the following resources: OpenSubtitles, Tatoeba, KDE4, wikimedia, GNOME {%cite TIEDEMANN12.463 lison-tiedemann-2016-opensubtitles2016 %}.
+The [Spanish-Asturian Parallel Corpus](https://huggingface.co/datasets/weezygeezer/Spanish-Asturian_Parallel-Corpus) is a dataset created to support the development of Machine Translation (MT) systems for translating from Spanish (es) into Asturian (ast). The text was extracted from [Opus](https://opus.nlpl.eu/results/es&ast/corpus-result-table) under the following resources: OpenSubtitles, Tatoeba, KDE4, wikimedia, GNOME {%cite TIEDEMANN12.463 lison-tiedemann-2016-opensubtitles2016 %}.
 
 These datasets were chosen specifically because the source and target pairs are correct.[^6] Additionally, the data from [PILAR](https://github.com/transducens/PILAR) was used to create synthetic corpora {%cite PILAR %}. This dataset separates both synthetic and existing data for convenience and ablation studies. The synthetic data consist of Spanish translations generated from the Asturian monolingual corpus of the PILAR dataset. To create the synthetic Spanish translations we used the [OPUS-MT](https://huggingface.co/Helsinki-NLP/opus-mt-tc-bible-big-itc-fra_ita_por_spa) model with greedy decoding.
 
@@ -220,5 +218,5 @@ A great deal of my time was spent reading research papers to understand the mach
 [^3]: Despite the extraction process being easy and can be remedied, this is unfortunate behavior by the major engine. Users interested in MT have resorted to the endpoint for further extraction.
 [^4]: Asturian was chosen based on the large amount of training examples available.
 [^5]: The translation models were also used in the Helinski Group's submission but we instead chose zero-shot performance to guide its usage.
-[^6]: There exists a decent collection of bitexts, but the largest collections (~1,000,000) contain many sentences that are simply not translations but gibberish. This can be verified by spot-checking the text document and comparing the sentence length. That is why we chose to curate a dataset instead and prevent noise in the training dataset as much as possible.
+[^6]: There exists a decent collection of bitexts on Opus, but the largest collections (~1,000,000) contain many sentences that are simply not translations but gibberish. This can be verified by spot-checking the text document and comparing the sentence length. That is why we chose to curate a dataset instead and prevent noise in the training data as much as possible.
 [^7]: The course INFO 555: Applied Natural Language Processing covered a lot of relevant skills used in this internship, especially with pretrained language models. While I took this class many months after the start of the internship, I highly recommend students to consider taking the course.
