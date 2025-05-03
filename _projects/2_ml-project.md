@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Named Entity Recognition with Classical ML
-description: Project for the course INFO 521 "Introduction to Machine Learning"
+description: Course Project — INFO 521 "Introduction to Machine Learning"
 img: assets/img/ner-project.png
 importance: 2
 category: coursework

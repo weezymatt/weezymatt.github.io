@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Bridging the digital divide: Where do we stand?"
-description: XRI Global Internship
+description: Internship — XRI Global
 img: assets/img/test400.jpg
 # 12.jpg
 importance: 1
@@ -11,13 +11,11 @@ related_publications: true
 
 ## 1. Introduction
 
-The purpose of my internship at [XRI Global](https://www.xriglobal.ai/) was to provide support for low-resource languages via data extraction for training data used in machine translation (MT) systems. The accumulation of my efforts spanned a range of sources for bitexts[^1] and provides an initial survey of the available resources needed for work on MT. A translation system was also trained between Spanish (es) and Asturian (ast), which achieved above state-of-the-art performance, as far as I know.
+The purpose of my internship at [XRI Global](https://www.xriglobal.ai/) was to provide support for low-resource languages via data extraction for training data used in machine translation (MT) systems. The accumulation of my efforts spanned a range of sources for bitexts[^1] and provided an initial survey of the available resources needed for work on MT. A translation system was also trained between Spanish (es) and Asturian (ast), which achieved above state-of-the-art performance, as far as I know.
 
 The first step in bridging the digital divide starts by cataloging data and models from popular hubs (e.g., Hugging Face, GitHub, Common Voice) to assess the amount of support needed to develop these language technologies, in particular for those classified as low-resource. In the context of natural language processing (NLP), the relevant modalities include audio- and text-based resources. My focus throughout the internship was on machine translation (i.e., text-based resources).
 
-My role at XRI Global was akin to a junior Data Engineer or ML/NLP Engineer and was largely independent from the other interns because I was the sole contributor for data extraction/modeling for MT. However I often intracted with nearly all interns for sanity checks, or to share my findings.
-
-<!-- I often interacted with Jennifer, whose responsibility was to pool everyone's findings into a database for the final website—our interactions helped streamline the data attributes for each collection. I also worked with Vanessa to distribute annotation and visualization duties because she joined the team late and the team already had many duties fulfilled at the time. Prior to the conference, I often worked with Daniel which improved my understanding of XRIs mission statement, which helped bring things down-to-earth. Lastly, I worked with Zach (intern lead) by creating a master list of results from experiments done by other interns. -->
+My role at XRI Global was akin to a junior Data Engineer or ML/NLP Engineer and was largely independent from the other interns because I was the sole contributor for data extraction/modeling for MT. However I often interacted with nearly all interns to share my findings. I interacted with Jennifer, whose interactions indirectly helped streamline the attributes for each collection. I briefly worked with Vanessa to distribute annotation and visualization duties because at the time of her arrival, the team already had most duties fulfilled. Prior to the conference, I worked with Daniel which improved my understanding of the company's mission statement. Lastly, I worked with Zach (intern lead) by creating a master list of results from experiments done by other interns.
 
 The work was also presented during a poster session at the International Conference on Language Technologies for All (LT4All 2025) held at the UNESCO Headquarters. The abstract is shown below:
 
@@ -31,7 +29,7 @@ The work was also presented during a poster session at the International Confere
 > :page_facing_up: Poster abstract is available [here](https://www.lt4all2025.eu/2025/02/24/lt4all-2025-book-of-abstracts-now-available/) under `Bridging the digital divide: Where do we stand?` <br>
 > :computer: XRI Global and students at UA produced a map that is live [here](https://inclusiveai-app.vercel.app/)
 
-**NOTE: The code written during the internship is well-documented on GitHub and lengthy so I chose to simply link to the repository under the relevant header. Nearly all code was written by me except for the boilerplate code used from the [Translation](https://huggingface.co/docs/transformers/en/tasks/translation) documentation, which heavy modification.**
+**NOTE: The code written during the internship is well-documented on GitHub and lengthy so I chose to simply link to the repository under the relevant header. Nearly all code was written by me except for the boilerplate code used from the [Translation](https://huggingface.co/docs/transformers/en/tasks/translation) documentation, which went heavy modification.**
 
 ## 2. Digital Divide Objective
 
@@ -204,6 +202,8 @@ _Table 3: Model performance on Flores dev set._
 <br>
 
 Previous runs used a larger parallel corpus (~ 700,000 examples) but resulted in erratic performance. During these runs the bleu score would jump around 3, 8, 16, and 24 respectively. We attribute this behavior to the dataset containing noisy source-target pairs. The simple language identifier provided by the workshop was extremely useful in creating a quality dataset.
+
+**NOTE: XRI has existing software for running NMT, ASR, and TTS experiments. I chose to follow the documentation from Hugging Face instead, which allowed for me to experiment with backtranslation/preprocessing and get comfortable with Hugging Face.**
 
 ### 3.6 Final Thoughts
 
