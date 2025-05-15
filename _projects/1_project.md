@@ -52,7 +52,7 @@ Popular resources include:
 
 Hugging Face is a collaborative platform used for building, training, and deploying various artificial intelligence (AI) models, where many researchers and local efforts publish their datasets. For that reason we choose to use Hugging Face as the main source of data and include external datasets manually.
 
-There are two types of data collections we are interested in: bitexts and language pairs. Bitexts contain generic information, such as where the data originates from and which languages are supported in each bitext. However, an additional collection is needed to describe the direction of a translation pair (e.g., Spanish-Asturian) and must contain the number of examples in the respective bitext. The specific direction, whether from Spanish-to-Asturian or from Asturian-to-Spanish is not delineated—the choice to ignore directionality was a practical one and would require heavy annotation pulls focus from the goal of the internship.
+There are two types of data collections we are interested in: bitexts and language pairs. Bitexts contain generic information, such as where the data originates from and which languages are supported in each bitext. However, an additional collection is needed to describe the direction of a translation pair (e.g., Spanish-Asturian) and must contain the number of examples in the respective bitext. The specific direction, whether from Spanish-to-Asturian or from Asturian-to-Spanish is not delineated—the choice to ignore directionality was a practical one and would require heavy annotation pulling focus awayfrom the goal of the internship.
 
 The primary collection of bitexts, is extracted semi-automatically from Hugging Face's API. It's important to note that Hugging Face defines the translation task more generally, including related tasks such as transliteration, translation for programming languages, and machine translation. That is, finding bitexts requires manual tagging to identify relevant datasets. Therefore we focus on extracting data from the `translation` task where the bulk of datasets are uploaded. Lastly Hugging Face offers support for finding the number of rows[^2] which makes this process much smoother.
 
@@ -139,7 +139,7 @@ The list of supported languages can be extracted two ways: via the [Cloud Transl
 
 ℹ️ [GitHub - Workbook.ipynb](https://github.com/XRILLC/inclusiveai/blob/main/text/Workbook.ipynb)
 
-Candidate languages with enough training data can now be identified for modeling. We chose to focus on Asturian, a low-resource language with ~ 100,00 native speakers.[^4] Additionally, the Workshop for Machine Translation (WMT) has released the first edition of the Shared Task on Translation into Low-Resource Languages of Spain 2024 {%cite sanchez-martinez-etal-2024-findings %}.
+Candidate languages with enough training data can now be identified for modeling. We chose to focus on Asturian, a low-resource language with ~ 100,000 native speakers.[^4] Additionally, the Workshop for Machine Translation (WMT) has released the first edition of the Shared Task on Translation into Low-Resource Languages of Spain 2024 {%cite sanchez-martinez-etal-2024-findings %}.
 
 ### 3.3 Benchmarking
 

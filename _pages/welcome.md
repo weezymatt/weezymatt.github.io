@@ -43,8 +43,8 @@ Academically, my coursework involved various approaches (i.e., statistical, appl
 <!-- I also worked professionally as a community health analyst delivering patient-centric care by improving data quality and identifying high-risk patients for health opportunities. Funnily I practiced translating medical documents from Spanish to English because of my background in the pharmacy. -->
 
 <details>
-  <summary>jack of all trades...</summary>
-  <br>... master of <b>some</b>. <br>
+  <summary>A jack of all trades is a master of none...</summary>
+  <br>... <b>but</b> oftentimes better than a master of one.<br>
 </details><br>
 
 <!-- [^1]: Natural language is not a synonym for English. -->

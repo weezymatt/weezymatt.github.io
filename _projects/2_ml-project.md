@@ -109,7 +109,7 @@ The English dataset was preprocessed into training, development, and test sets. 
 
 Named entity recognition is treated as a sequence labeling task, that is, given a sequence of words $$ W = (w_1, ..., w_n) $$, we are interested in maximizing the best sequence of tags:
 
-$$ \hat{t}_{1:n} \approx \arg\max_{\hat{t}_{1:n}} P(tag_{1:n}|word\_{1:n}) \tag{1} $$
+$$ \hat{t}_{1:n} \approx \arg\max_{\hat{t}_{1:n}} P(tag_{1:n}|word_{1:n}) \tag{1} $$
 
 We'll introduce two class sequence labeling algorithms, the generative—Hidden Markov Model (HMM)—and the discriminative—Maximum Entropy Markov Model (MEMM). We encourage the reader who is interested in the mathematical derivation of each algorithm to read our paper. Otherwise the equation above is sufficient for intuition.
 
@@ -130,7 +130,7 @@ Two rule-based systems were computed for the English and Spanish corpora with th
     </div>
 </div>
 
-As evidenced with the **AlwaysNonEntity** baseline, token-level accuracy has a modest 80% but is meaninguless for NEs. The improved baseline **SingleEntity** labels entities only if they appear in the training data and is the default baseline for our system to improve upon.
+As evidenced with the **AlwaysNonEntity** baseline, token-level accuracy has a modest 80% but is meaningless for NEs. The improved baseline **SingleEntity** labels entities only if they appear in the training data and is the default baseline for our system to improve upon.
 
 Earlier I stated the CoNNL-2003 dataset is imbalanced. Largely the distribution of named entities is imbalanced where the majority class is outside (O). Therefore the micro-averaged F1 score will be used for evaluation because this doesn't prefer the majority class. However other evaluation methods may be appropriate depending on the domain, but are not considered to focus on the general design process for machine learning.
 
@@ -183,4 +183,4 @@ The discussion of generative and discriminative modeling by Ng and Jordan {%cite
 
 Therefore recent advancements (approx. 10 years ago) in NLP (i.e., embeddings) have improved our
 model (see Table 7) with little feature engineering and can reach competitive performance
-with tuning or more careful modeling. Ultimately, the performance is a secondary interest,and propose that the CoNNL-2003 dataset may be dated and we should instead access the generalization of these models by iteratively included recent entities or perhaps tackle nested entities.
+with tuning or more careful modeling. Ultimately, performance is a secondary interest, and we propose that the CoNNL-2003 dataset is dated; the generalization of these models should instead be the main focus (consider new entities), or handle nested entities.

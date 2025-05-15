@@ -3,9 +3,10 @@ github_users:
 repo_description_lines_max: 3
 
 github_repos:
+  - srikrish2812/info621_project
+  - weezymatt/tree-of-thoughts_demo
   - weezymatt/NER-with-Classical-ML
   - weezymatt/Retrieval-with-Wordle
   - weezymatt/ml-deployment
-  - weezymatt/tree-of-thoughts_demo
   - weezymatt/generate-emoji-list
   - XRILLC/inclusiveai
