@@ -11,49 +11,47 @@
 - title: Research Interests
   type: list
   contents:
-    - Natural Language Processing, Linguistics, Machine Learning, Deep Learning, Machine Translation, Bilingualism, Psycholinguistics
+    - Natural Language Processing, Computational Linguistics, Machine Learning, Deep Learning, Machine Translation, Bilingualism, Psycholinguistics
 
 - title: Experience
   type: time_table
   contents:
-    - title: NLP/ML Intern | XRI Global, Remote
+    - title: NLP Research Intern | XRI Global (Remote)
       department: "<a href='https://inclusiveai-app.vercel.app/'>https://inclusiveai-app.vercel.app/</a>"
-      year: 2024 - Current
+      year: 2024 - 2025
       description:
-        - Developed a semi-automated extraction system that identified candidate languages for neural machine translation
-          unsupported by major engines
-        - Created a quality management process to ensure metadata for parallel corpora is unique, consistent, and complete
-        - Conducted a literature review on effective strategies to improve performance for machine translation in low-resource
-          settings (e.g., back-translation, multilingual transfer, filtering)
-        - Implemented a neural translation system with competitive performance under limited resources by first establishing a
-          baseline model to guide improvements
-    - title: Research Assistant
+        - Developed a semi-automatic ETL system to guide resource allocation by identifying low-resource languages for machine translation (MT) 
+          and structuring multilingual datasets
+        - Created ML pipeline to improve baseline system (+4 BLEU) using strategies for low-resource languages, such as, back-translation, 
+          multilingual transfer, and language identification
+        - Presented internship work at LT4ALL poster session and contributed to front-end integration of datasets into website
+    - title: LLM Data Annotator 
       institution: University of Arizona
       department: Linguistics & Computer Science
-      year: 2023 - 2024
+      year: 2023 - 2025
       description:
-        - Supported the development of novel datasets for various phenomena (i.e., consequences of subjective views and understanding of rhetorical questions) for LLMs
-        - Designed supplementary guidelines for annotation cycle resulting in substantial agreement between annotators and
-          solved disagreements with the adjudicator
-        - Assessed the quality of novel datasets by utilizing statistical methods (e.g., Cohen’s kappa) to evaluate inter-rater
-          reliability between annotators
+        - Constructed datasets used to evaluate the performance of language models on rhetorical questions and subjectivity;
+          results were submitted for publication (under review) introducing the dataset
+        - Contributed to documentation quality by producing additional guidelines and incorporating linguistic tests, resulting 
+          in a Cohen’s kappa score of 0.66
 
-    - title: Community Health Analyst | WellMed Medical Management
-      institution:
+    - title: Community Health Worker/Analyst
+      institution: WellMed Medical Management
       year: 2022-2024
       description:
-        - Identified high-risk patients for health opportunities by compiling data and characterizing patients without a primary care provider for downstream outreach
-        - Standardized community health pipeline to target patients post-hospitalization and support patients by providing access to social and medical resources.
-        - Improved data quality for patient variables (e.g., existing primary physician) by submitting approvals on behalf of patients with undetermined information
-        # - Impacted the well-being of patients positively by simple explanations of coverage and healthcare outcomes
+        - Identified high-risk, disconnected patients by analyzing EHR data and querying clinical databases using Power Query to support strategic outreach and 
+          patient engagement outcomes
+        - Optimized approval workflows to strengthen data integrity and reduce gaps for HEDIS measures
+        - Standardized the post-discharge pipeline to effectively coordinate home visits and connect patients with essential medical and social services
+        - Conducted patient interviews to collect clinical data and provided Spanish translation services when needed
 
     - title: Research Assistant
       institution: University of El Paso
       department: Linguistics
       year: 2021-2021
       description:
-        - Supervised various picture description tasks for grammatical analysis in English-Spanish to measure the choice of noun phrases (R-expressions)
-        - Configured Ibex software to host new psycholinguistic experiments for students and record their response time
+        - Conducted and supervised bilingual picture description tasks to analyze grammatical structures (i.e., noun phrases)
+        - Programmed psycholinguistic experiments in Ibex using JavaScript, HTML, and CSS
 
 - title: Education
   type: time_table
@@ -61,7 +59,7 @@
     - title: M.S. in Human Language Technology
       institution: University of Arizona
       year: 2025
-      description:
+      description: Computational Linguistics
 
     - title: B.A. in Linguistics
       institution: University of El Paso
@@ -98,11 +96,24 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://huggingface.co/weezygeezer">MT4All on Hugging Face</a>
-      year: 2025-now
+    - title: <a href="https://huggingface.co/weezygeezer">MT on Hub (Hugging Face)</a>
+      year: 2024 - now
       description:
-        - Submit pull requests to update language information (ISO codes) and data attributes for machine translation datasets
+        - Submit PRs to update language metadata (e.g., ISO codes) for machine translation datasets
         - Correct file errors in uploaded datasets by preprocessing .csv files or starting community discussions
+    - title: <a href="https://github.com/explosion/spaCy">spaCy Industrial-strength NLP</a>
+      year: 2025 - now
+      description:
+        - Contributed to GitHub discussions by examining code bases and citing documentation to provide clear guidance
+        - Currently implementing additional features to improve support (e.g., update rule set to verify lemmas, expand vocabulary) for the Spanish language
+    - title: <a href="https://github.com/rasbt/LLMs-from-scratch">LLMs from Scratch</a>
+      year: 2025 - now
+      description:
+        - Active maintainer that closes issues via PRs (following best-practices), adding unit tests, and enhancing code documentation
+    - title: <a href="https://github.com/huggingface/transformers">Transformers (Hugging Face)</a>
+      year: 2025 - now
+      description:
+        - Translating documentation from English to Spanish and using terminology relevant in the language
 
 - title: Abstracts
   type: time_table
